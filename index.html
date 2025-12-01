@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,7 +56,7 @@
       flex-wrap: wrap;
       justify-content: center;
       background: var(--card-dark);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     body.light nav {
@@ -173,19 +174,70 @@
 
     .cancion-card h3 {
       text-align: center;
-font-size: 200%;
+      font-size: 200%;
     }
 
-    .portada { grid-area: portada; }
+    .portada {
+      grid-area: portada;
+    }
 
-    .titulo-cancion { grid-area: titulo; background: var(--gris-oscuro); padding: 0.5rem; border-radius: 10px; text-align: center; }
-    body.light .titulo-cancion { background: var(--blanco); }
+    .titulo-cancion {
+      grid-area: titulo;
+      background: var(--gris-oscuro);
+      padding: 0.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
 
-    .reproductor { grid-area: reproductor; }
-    .explicacion { grid-area: explicacion; background: var(--gris-oscuro); padding: 1rem; border-radius: 10px; }
-    body.light .explicacion { background: var(--blanco); }
+    body.light .titulo-cancion {
+      background: var(--blanco);
+    }
+
+    .reproductor {
+      grid-area: reproductor;
+    }
+
+    .explicacion {
+      grid-area: explicacion;
+      background: var(--gris-oscuro);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    body.light .explicacion {
+      background: var(--blanco);
+    }
+
+    body.light .explicacion {
+      background: var(--blanco);
+    }
+
+    .lista-cosas {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .lista-cosas li {
+      background: var(--gris-oscuro);
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    body.light .lista-cosas li {
+      background: var(--blanco);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .lista-cosas li:hover {
+      transform: scale(1.02);
+    }
   </style>
 </head>
+
 <body>
   <button class="modo-btn" onclick="toggleModo()">☀️ Modo claro</button>
 
@@ -196,13 +248,15 @@ font-size: 200%;
   <nav>
     <button onclick="mostrarSeccion('inicio')">Inicio</button>
     <button onclick="mostrarSeccion('fotos')">Fotos</button>
-
+    <button onclick="mostrarSeccion('cosas-juntos')">Cosas Juntos</button>
     <button onclick="mostrarSeccion('playlist')">Playlist</button>
   </nav>
 
   <section id="inicio" class="active">
     <div class="titulo"></div>
-    <p>Esto es un pequeño recordatorio de lo mucho que te quiero, aqui van a estar algunas de las explicaciones de las canciones de la playlist, algunas de mis fotos favoritas. Hay alugunas cosas que agregaré aqui a medida de que vaya pasando el tiempo 💝</p>
+    <p>Esto es un pequeño recordatorio de lo mucho que te quiero, aqui van a estar algunas de las explicaciones de las
+      canciones de la playlist, algunas de mis fotos favoritas. Hay alugunas cosas que agregaré aqui a medida de que
+      vaya pasando el tiempo 💝</p>
   </section>
 
   <section id="fotos">
@@ -214,107 +268,170 @@ font-size: 200%;
       <img src="imgl4.jpg" alt="Foto 4">
       <img src="imgl5.jpg" alt="Foto 5">
       <img src="imgl6.jpg" alt="Foto 6">
-      <img src="imgl7.jpg" alt="Foto 7">
-      <img src="imgl8.jpg" alt="Foto 8">
-      <img src="imgl9.jpg" alt="Foto 9">
-      <img src="imgl10.jpg" alt="Foto 10">
-      <img src="imgl11.jpg" alt="Foto 11">
-    </div>
+  </section>
+
+  <section id="cosas-juntos">
+    <div class="titulo">Cosas Juntos</div>
+    <p style="text-align: center;">Aquí pondré algunas cosas que quiero que hagamos juntos.💖</p>
+    <ul class="lista-cosas">
+      <li>Ir a la playa</li>
+      <li>Hacer un pikinik</li>
+      <li>Pasar todo un dia juntos</li>
+      <li>Escaparnos de noche😈</li>
+    </ul>
+    <p style="text-align: center;">¿Cuales son las que tu quieres? </p>
   </section>
 
 
 
   <section id="playlist">
     <div class="titulo">LAIN</div>
-        <div class="spotify">  
-            <p>Cada canción representa algo que siento por ti. Aquí están algunas explicaciones:</p>
+    <div class="spotify">
+      <p>Cada canción representa algo que siento por ti. Aquí están algunas explicaciones:</p>
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1owEedjddxDKDhxdPfjoci?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/1owEedjddxDKDhxdPfjoci?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
 
     <div class="cancion-card">
       <div class="portada"><img src="imgp1.png" alt="Portada canción"></div>
-      <div class="titulo-cancion"><h3>99.99%</h3></div>
+      <div class="titulo-cancion">
+        <h3>99.99%</h3>
+      </div>
       <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
       <div class="explicacion">
-        Sabes que soy muy creyente en que todo sucede por una razón y el conocernos nosotros no es la excepción, nuestra relación es producto de todas las decisiones que tomamos a lo largo de los años y si me preguntas a pesar de cada error que cometí en mi vida, no cambiaria nada si pudiera hacerlo ya que ese error pudo ser uno de los desencadenantes por el cual terminamos conociéndonos.
-<br>Y otra cosa es que entre tantas personas, tantos años que este mundo tiene existiendo coincidí contigo y hoy estamos juntos
+        Sabes que soy muy creyente en que todo sucede por una razón y el conocernos nosotros no es la excepción,
+        nuestra
+        relación es producto de todas las decisiones que tomamos a lo largo de los años y si me preguntas a pesar de
+        cada error que cometí en mi vida, no cambiaria nada si pudiera hacerlo ya que ese error pudo ser uno de los
+        desencadenantes por el cual terminamos conociéndonos.
+        <br>Y otra cosa es que entre tantas personas, tantos años que este mundo tiene existiendo coincidí contigo y
+        hoy
+        estamos juntos
 
       </div>
-    </div>    
-      <div class="cancion-card">
-        <div class="portada"><img src="imgo6.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>Until i found you</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Antes de conocerte a ti realmente me había cerrado a sentir cariño por cualquier otra persona por cosas que me habían pasado antes, pero llegaste tú a demostrarme que volver a querer no estaba mal, cada que me demuestras que me quieres vuelvo a creer que es posible querer a alguien y ser correspondido. Y espero que esos sentimientos que sientes por mi nunca desaparezcan.
-        </div>
-      </div> 
-           <div class="cancion-card">
-        <div class="portada"><img src="imgp5.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>Coleccionista de canciones</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Desde que entraste en mi vida, cada momento contigo se ha vuelto algo que quiero guardar para siempre. No se trata solo de recuerdos, sino de emociones, miradas, palabras… como si cada uno fuera una canción que colecciono porque me hace sentir vivo.
-           <br> Nunca imaginé que alguien pudiera convertirse en el centro de tantas cosas que siento. Tú lo cambiaste todo. Contigo entendí lo que significa realmente querer a alguien, y lo más hermoso de todo es sentir que eso que yo siento, también lo recibo de ti.
-            </div> 
-        </div> 
-             <div class="cancion-card">
-        <div class="portada"><img src="imgp3.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>Amarte a la antigua</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Aunque parezca que no soy así realmente me gusta demostrar el amor de todas las formas posibles. No me gusta solo hablar por redes, obviamente me gusta pasar tiempo juntos, cada momento, cada sonrisa compartida es mejor que un mensaje, aunque no tiene nada de malo hablar por chat las salidas y los regalos espontáneos son lo mejor.
-            Y quiero contigo tener un amor así, donde ambos demostremos lo que sentimos el uno por el otro y no dar por hecho que el otro sabe lo que sientes por él.
-            
-        </div>
-            </div>
-      <div class="cancion-card">
-        <div class="portada"><img src="imgp4.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>Fantasía</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Obviamente me siento atraído hacia ti de todas las maneras y realmente contigo descubrí fantasías que no sabía que tenía.
-           <br> Como parte de la misma canción “quiero besarte los lunares, estrías, defectos” cada parte de tu cuerpo me gusta y quiero poder algún día explorarlo al completo, queriendo cada cosa que para ti es un defecto pero para mi no es un defecto si no cada pequeña cosa que te hace ser tú, ser quién eres.
-            </div> 
-        </div>
+    </div>
+    <div class="cancion-card">
+      <div class="portada"><img src="imgo6.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>Until i found you</h3>
+      </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Antes de conocerte a ti realmente me había cerrado a sentir cariño por cualquier otra
+        persona por cosas que me habían pasado antes, pero llegaste tú a demostrarme que volver a querer no estaba
+        mal,
+        cada que me demuestras que me quieres vuelvo a creer que es posible querer a alguien y ser correspondido. Y
+        espero que esos sentimientos que sientes por mi nunca desaparezcan.
+      </div>
+    </div>
+    <div class="cancion-card">
+      <div class="portada"><img src="imgp5.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>Coleccionista de canciones</h3>
+      </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Desde que entraste en mi vida, cada momento contigo se ha vuelto algo que quiero
+        guardar
+        para siempre. No se trata solo de recuerdos, sino de emociones, miradas, palabras… como si cada uno fuera una
+        canción que colecciono porque me hace sentir vivo.
+        <br> Nunca imaginé que alguien pudiera convertirse en el centro de tantas cosas que siento. Tú lo cambiaste
+        todo. Contigo entendí lo que significa realmente querer a alguien, y lo más hermoso de todo es sentir que eso
+        que yo siento, también lo recibo de ti.
+      </div>
+    </div>
+    <div class="cancion-card">
+      <div class="portada"><img src="imgp3.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>Amarte a la antigua</h3>
+      </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Aunque parezca que no soy así realmente me gusta demostrar el amor de todas las formas
+        posibles. No me gusta solo hablar por redes, obviamente me gusta pasar tiempo juntos, cada momento, cada
+        sonrisa
+        compartida es mejor que un mensaje, aunque no tiene nada de malo hablar por chat las salidas y los regalos
+        espontáneos son lo mejor.
+        Y quiero contigo tener un amor así, donde ambos demostremos lo que sentimos el uno por el otro y no dar por
+        hecho que el otro sabe lo que sientes por él.
+
+      </div>
+    </div>
+    <div class="cancion-card">
+      <div class="portada"><img src="imgp4.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>Fantasía</h3>
+      </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Obviamente me siento atraído hacia ti de todas las maneras y realmente contigo descubrí
+        fantasías que no sabía que tenía.
+        <br> Como parte de la misma canción “quiero besarte los lunares, estrías, defectos” cada parte de tu cuerpo me
+        gusta y quiero poder algún día explorarlo al completo, queriendo cada cosa que para ti es un defecto pero para
+        mi no es un defecto si no cada pequeña cosa que te hace ser tú, ser quién eres.
+      </div>
+    </div>
 
     <div class="cancion-card">
-        <div class="portada"><img src="imgp2.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>o tu o yo</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Se que aunque te cele de todas maneras o te reclame porque actúes o hables con alguien no puedo evitar que te sientas atraída por alguna otra persona, podría controlar toda tu vida y aun así no podría. Pero intentaré que nunca quieras recurrir a buscar cariño a otra persona para así poder evitar que quieras engañarme o que te llegues a enamorar de otra persona 
-        </div>
+      <div class="portada"><img src="imgp2.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>o tu o yo</h3>
       </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Se que aunque te cele de todas maneras o te reclame porque actúes o hables con alguien
+        no
+        puedo evitar que te sientas atraída por alguna otra persona, podría controlar toda tu vida y aun así no
+        podría.
+        Pero intentaré que nunca quieras recurrir a buscar cariño a otra persona para así poder evitar que quieras
+        engañarme o que te llegues a enamorar de otra persona
+      </div>
+    </div>
 
-      </div>
+    </div>
     <div class="cancion-card">
-        <div class="portada"><img src="imgp7.png" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>No me falles</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Esta creo que se explica sola, Como ya te conté, Antes de ti, no quería nada con nadie pero contigo nació un lado mío que ni yo conocía. Esa parte que quiere entregarse, que quiere quedarse, que siente que por fin encontró algo real. <br>
-<br> Esta canción habla de alguien que decidió darle otra oportunidad al amor, aun sabiendo lo que es el dolor, y yo me siento así cada vez que estoy contigo. Por ti le bajé a muchas cosas, dejé atrás actitudes que ya no me representan, y encontré paz en lo que somos. <br>
-<br> Me recuerda a ti porque me hiciste creer que sí existe alguien que puede cambiar tu mundo sin obligarte, solo queriéndote bien. Solo te pido, como en la canción, que no me falles. Porque te entregué una parte de mí que no había compartido con nadie, y no quiero que se pierda.
+      <div class="portada"><img src="imgp7.png" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>No me falles</h3>
+      </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Esta creo que se explica sola, Como ya te conté, Antes de ti, no quería nada con nadie
+        pero contigo nació un lado mío que ni yo conocía. Esa parte que quiere entregarse, que quiere quedarse, que
+        siente que por fin encontró algo real. <br>
+        <br> Esta canción habla de alguien que decidió darle otra oportunidad al amor, aun sabiendo lo que es el dolor,
+        y yo me siento así cada vez que estoy contigo. Por ti le bajé a muchas cosas, dejé atrás actitudes que ya no me
+        representan, y encontré paz en lo que somos. <br>
+        <br> Me recuerda a ti porque me hiciste creer que sí existe alguien que puede cambiar tu mundo sin obligarte,
+        solo queriéndote bien. Solo te pido, como en la canción, que no me falles. Porque te entregué una parte de mí
+        que no había compartido con nadie, y no quiero que se pierda.
 
       </div>
-            </div>
+    </div>
 
 
+    </div>
+    <div class="cancion-card">
+      <div class="portada"><img src="selfish.jpeg" alt="Portada canción"></div>
+      <div class="titulo-cancion">
+        <h3>Selfish</h3>
       </div>
-          <div class="cancion-card">
-        <div class="portada"><img src="selfish.jpeg" alt="Portada canción"></div>
-        <div class="titulo-cancion"><h3>Selfish</h3></div>
-        <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
-        <div class="explicacion">Quiero tenerte solo para mí. <br>
-No necesito a nadie más porque lo que siento por ti es suficiente
-Lo admito: soy egoísta contigo. <br>
-Me acostumbré a ti, a tu piel, a tu voz, a tu risa, y a esa forma tuya de mirarme como si supieras exactamente lo que me haces sentir. <br>
-No te quiero controlar, pero tampoco quiero verte con nadie más <br>
-No podría. <br>
-Porque no estoy, ni estaré, listo para perderte. <br>
-Tú no te imaginas lo que provocas en mí, cómo cambias mi día con solo hablarme, lo mal que me siento cuando no puedo verte, y lo bien que me siento cuando nos vemos. <br>
-Y sí, soy egoísta, pero es que no quiero compartirte con nadie. <br>
-y aunque sea egoísta todo lo mío es para ti, y ojalá tú también sientas que cada parte de ti puede quedarse conmigo sin miedo, sin dudas, sin pensar demasiado.
-        </div>
+      <div class="reproductor"><img src="repo.png" alt="Reproductor Spotify"></div>
+      <div class="explicacion">Quiero tenerte solo para mí. <br>
+        No necesito a nadie más porque lo que siento por ti es suficiente
+        Lo admito: soy egoísta contigo. <br>
+        Me acostumbré a ti, a tu piel, a tu voz, a tu risa, y a esa forma tuya de mirarme como si supieras exactamente
+        lo que me haces sentir. <br>
+        No te quiero controlar, pero tampoco quiero verte con nadie más <br>
+        No podría. <br>
+        Porque no estoy, ni estaré, listo para perderte. <br>
+        Tú no te imaginas lo que provocas en mí, cómo cambias mi día con solo hablarme, lo mal que me siento cuando no
+        puedo verte, y lo bien que me siento cuando nos vemos. <br>
+        Y sí, soy egoísta, pero es que no quiero compartirte con nadie. <br>
+        y aunque sea egoísta todo lo mío es para ti, y ojalá tú también sientas que cada parte de ti puede quedarse
+        conmigo sin miedo, sin dudas, sin pensar demasiado.
       </div>
+    </div>
 
-      
-  </section> 
+
+  </section>
 
   <script>
     function mostrarSeccion(id) {
@@ -330,4 +447,5 @@ y aunque sea egoísta todo lo mío es para ti, y ojalá tú también sientas que
     }
   </script>
 </body>
+
 </html>
